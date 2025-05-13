@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop & Crunch Vending | Smart Vending Solutions in DC, MD, VA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .contact-form input, .contact-form textarea {
+            transition: all 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <!-- Logo placeholder -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-10 w-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-xl">P&C</div>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Pop & Crunch</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="nav-link text-gray-900 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#services" class="nav-link text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#locations" class="nav-link text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Locations</a>
+                    <a href="#contact" class="nav-link text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#request" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Request a Machine
+                    </a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="mobile-menu-button bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Services</a>
+                <a href="#locations" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Locations</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                <a href="#request" class="block w-full px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    Request a Machine
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Smart Vending Solutions for Your Business</h1>
+                    <p class="text-xl mb-8">Eco-friendly, data-driven vending machines stocked with healthy options tailored to your customers' preferences.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#request" class="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg text-lg font-semibold text-center transition duration-300 ease-in-out transform hover:scale-105">
+                            Request a Free Machine
+                        </a>
+                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded-lg text-lg font-semibold text-center transition duration-300 ease-in-out transform hover:scale-105">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://huggingface.co/spaces/popandcrunch/pop-crunch/resolve/main/AdobeStock_468659910.jpeg" alt="Modern vending machine" class="rounded-xl shadow-2xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="bg-gray-50 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-indigo-600 text-3xl mb-2">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Eco-Friendly</h3>
+                    <p class="text-gray-600">Energy efficient machines</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-indigo-600 text-3xl mb-2">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Healthy Options</h3>
+                    <p class="text-gray-600">30%+ healthy snacks</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-indigo-600 text-3xl mb-2">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Data-Driven</h3>
+                    <p class="text-gray-600">Customer preference surveys</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-indigo-600 text-3xl mb-2">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Full Service</h3>
+                    <p class="text-gray-600">Restocking & maintenance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">About Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Revolutionizing Vending in the DMV
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    We're not your typical vending machine company.
+                </p>
+            </div>
+
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team meeting" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="space-y-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-poll"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Customer Preference Surveys</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    We conduct regular surveys at your location to understand what your customers actually want, ensuring higher satisfaction and sales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Sustainable Practices</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    Our machines are energy-efficient and we prioritize eco-friendly packaging options to reduce environmental impact.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Community Focused</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    We partner with local businesses and suppliers whenever possible to support the DMV economy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Services</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Vending Solutions for Every Need
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    From traditional snacks to high-tech smart machines, we've got you covered.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://huggingface.co/spaces/popandcrunch/pop-crunch/resolve/main/ChatGPT%20Image%20May%208%2C%202025%2C%2011_24_05%20PM.png" alt="Snack vending machine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-cookie text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Snack Machines</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Traditional and healthy snack options with 30%+ healthier choices based on customer preferences.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Customizable product mix</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Digital payment options</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Monthly preference surveys</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://huggingface.co/spaces/popandcrunch/pop-crunch/resolve/main/AdobeStock_964664183_Editorial_Use_Only.jpeg" alt="Drink vending machine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-coffee text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Drink Machines</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Cold beverage solutions with options ranging from traditional sodas to premium waters and juices.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Energy-saving refrigeration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Healthy alternative options</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Seasonal product rotations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://huggingface.co/spaces/popandcrunch/pop-crunch/resolve/main/6772136f-3758-4c3f-8a2e-e78b6cb0e3c0.png" alt="Combo vending machine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-boxes text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Combo Machines</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            All-in-one solutions combining snacks and drinks in a single space-saving unit.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>50/50 snack and drink ratio</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Space-efficient design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Higher revenue potential</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                  <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://huggingface.co/spaces/popandcrunch/pop-crunch/resolve/main/ChatGPT%20Image%20May%2013%2C%202025%2C%2011_03_46%20AM.png" alt="Frozen food vending machine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-ice-cream text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Frozen Machines</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Premium frozen food options including ice cream, frozen meals, and healthy frozen snacks.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Commercial-grade freezers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Microwave-ready meals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Temperature monitoring</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://huggingface.co/spaces/popandcrunch/pop-crunch/resolve/main/AdobeStock_866925768.jpeg" alt="Smart vending machine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-microchip text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Smart Machines</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            High-tech vending solutions with touchscreens, cashless payments, and real-time inventory tracking.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Interactive touch displays</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Mobile app integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Automatic restock alerts</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Marketing support" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-bullhorn text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Marketing Support</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            We help promote your vending services to maximize usage and revenue.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Custom signage and decals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Promotional campaigns</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Employee engagement programs</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section id="locations" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Service Area</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Serving the DMV Region
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    We provide vending solutions throughout Washington DC, Maryland, and Virginia.
+                </p>
+            </div>
+
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4">Our Coverage Area</h3>
+                        <p class="mb-4">We service locations within a 2-3 hour radius of Washington DC, including:</p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-indigo-700 mb-2">Washington DC</h4>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li>• All neighborhoods</li>
+                                    <li>• Government buildings</li>
+                                    <li>• Universities</li>
+                                    <li>• Office parks</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-indigo-700 mb-2">Maryland</h4>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li>• Montgomery County</li>
+                                    <li>• Prince George's County</li>
+                                    <li>• Howard County</li>
+                                    <li>• Anne Arundel County</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-indigo-700 mb-2">Virginia</h4>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li>• Arlington County</li>
+                                    <li>• Fairfax County</li>
+                                    <li>• Loudoun County</li>
+                                    <li>• Prince William County</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-indigo-700 mb-2">Other Areas</h4>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li>• Alexandria</li>
+                                    <li>• Falls Church</li>
+                                    <li>• Bethesda</li>
+                                    <li>• Silver Spring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+  <div class="bg-gray-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://huggingface.co/spaces/popandcrunch/pop-crunch/resolve/main/Screenshot%202025-05-12%20225218.png" 
+      alt="DMV service area map" 
+      class="w-full h-full object-cover opacity-90">
+    <div class="p-4 bg-gray-900 text-white">
+      <p>Don't see your location listed? Contact us to see if we service your area!</p>
+    </div>
+  </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">What Our Clients Say</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Trusted by Businesses Across the DMV
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <p class="text-gray-600 text-sm">Office Manager, Tech Startup</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 mb-4">
+                        <i class="fas fa-quote-left text-gray-300 mr-2"></i>
+                        The survey-based stocking has been a game changer for our office. Our employees actually look forward to the vending machine restocks now!
+                        <i class="fas fa-quote-right text-gray-300 ml-2"></i>
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael R. </h4>
+                            <p class="text-gray-600 text-sm">Gym Owner, Fairfax</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 mb-4">
+                        <i class="fas fa-quote-left text-gray-300 mr-2"></i>
+                        Pop & Crunch's healthy options perfectly align with our gym's values. Their smart machine with protein snacks is a huge hit with our members.
+                        <i class="fas fa-quote-right text-gray-300 ml-2"></i>
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">David T. </h4>
+                            <p class="text-gray-600 text-sm">University Facilities</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 mb-4">
+                        <i class="fas fa-quote-left text-gray-300 mr-2"></i>
+                        Their full-service maintenance means we never have to worry about machines being down. The eco-friendly features also helped us meet campus sustainability goals.
+                        <i class="fas fa-quote-right text-gray-300 ml-2"></i>
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="request" class="hero-gradient text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+                    <p class="text-xl mb-8">Request a free vending machine for your business with no upfront costs. We handle everything from installation to maintenance.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-white rounded-full p-3">
+                            <i class="fas fa-phone text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm">Prefer to call?</p>
+                            <p class="text-xl font-semibold">(202) 455-0563</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden contact-form">
+                        <div class="bg-gray-50 px-6 py-4 border-b">
+                            <h3 class="text-lg font-medium text-gray-900">Request a Free Machine</h3>
+                        </div>
+                        <div class="px-6 py-4">
+                            <form action="https://formspree.io/f/mldbpyad" method="POST">
+                            <input type="hidden" name="_subject" value="New Machine Request from Pop & Crunch">
+  <input type="hidden" name="_captcha" value="false">
+                                <div class="space-y-4">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                        <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                        <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                    </div>
+                                    <div>
+                                        <label for="business" class="block text-sm font-medium text-gray-700">Business Name</label>
+                                        <input type="text" id="business" name="business" class="text-gray-900 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                    </div>
+                                    <div>
+                                        <label for="location" class="block text-sm font-medium text-gray-700">Business Location</label>
+                                        <input type="text" id="location" name="location" class="text-gray-900 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="City, State">
+                                    </div>
+                                    <div>
+                                        <label for="type" class="block text-sm font-medium text-gray-700">Type of Machine Needed</label>
+                                        <select id="type" name="type" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-700">
+                                            <option value="">Select an option</option>
+                                            <option value="snack">Snack Machine</option>
+                                            <option value="drink">Drink Machine</option>
+                                            <option value="combo">Combo Machine</option>
+                                            <option value="frozen">Frozen Food Machine</option>
+                                            <option value="smart">Smart Machine</option>
+                                            <option value="notsure">Not Sure</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-gray-700">Additional Information</label>
+                                        <textarea id="message" name="message" rows="3" class="text-gray-900 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                            Submit Request
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Get in Touch
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Have questions? We're here to help!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="text-lg font-medium">Our Office</h3>
+                    </div>
+                    <p class="text-gray-600">530 11th Street SE<br>Washington, DC 20003</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3 class="text-lg font-medium">Phone</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        (202) 555-1234<br>
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="text-lg font-medium">Email</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        General: info@popandcrunch.com<br>
+                        Sales: sales@popandcrunch.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-lg font-medium text-center mb-6">Business Hours</h3>
+                <div class="max-w-md mx-auto bg-gray-50 rounded-lg p-6">
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <p class="font-medium">Monday - Friday</p>
+                            <p class="text-gray-600">8:00 AM - 6:00 PM</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Saturday</p>
+                            <p class="text-gray-600">9:00 AM - 2:00 PM</p>
+                        </div>
+                        <div class="col-span-2">
+                            <p class="font-medium">Sunday</p>
+                            <p class="text-gray-600">Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2
+</html>
